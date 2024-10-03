@@ -1,6 +1,9 @@
 # Virtual Env
 rurall/
 
+# Environment variables
+.env
+
 # WIP files
 WIP/
 
