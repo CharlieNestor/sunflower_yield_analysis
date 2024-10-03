@@ -49,7 +49,8 @@ This will authenticate your Google Earth Engine account and allow you to access 
 
 ```
 import ee
-ee.Initialize(project='YOUR_PROJECT_ID')
+ee.Initialize(project='YOUR_PROJECT_NAME')
 ```
+You can either directly write your project name or store it in a .env file.
 
 
