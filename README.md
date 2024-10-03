@@ -26,7 +26,7 @@ This project focuses on the analysis of agricultural yield data for sunflowers u
 To use this project:
 
 1. Clone the repository to your local machine.
-2. Ensure you have the required dependencies installed (see `requirements.txt`).
+2. Ensure you have the required dependencies installed (see `requirements.txt`) in a virtual environment.
 3. Run the notebooks in the following order:
    - `EDA_cleaning.ipynb`
    - `Yield_mapping.ipynb`
@@ -38,4 +38,18 @@ To use this project:
 
 - Yield data in GeoPackage format is provided in the `Data`folder (`resa_girasole_2022.gpkg`).
 - Sentinel-2 satellite imagery (accessed via Google Earth Engine).
-- In order to access Google Earth Engine you need to have an account in Google Cloud Console and create a new project.
+
+In order to access Google Earth Engine, you need an account in Google Cloud Console and have/create a dedicated Project with Google Earth Engine API enabled. Visit (https://earthengine.google.com) for further information. Once you have the account set up, run the following commands in the Terminal:
+
+```
+earthengine authenticate
+```
+
+This will authenticate your Google Earth Engine account and allow you to access the API. Remember that whenever you want to use Google Earth Engine, you need to initialise the session with the following command:
+
+```
+import ee
+ee.Initialize(project='YOUR_PROJECT_ID')
+```
+
+
